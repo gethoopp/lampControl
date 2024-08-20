@@ -84,8 +84,8 @@ class ControlLightBloc extends Bloc<ControlLightEvent, ControlLightState> {
           List<BluetoothService> services = await event.bluetoothDevice.discoverServices();
           BluetoothCharacteristic? targetCharachteristic;
 
-          String seviceUUID = "";
-          String characteristicUUID = "" ;
+          String seviceUUID = "7680574d-9dd8-4b9d-90bd-5005ead7e6aa";
+          String characteristicUUID = "e1599746-2e38-41a6-a6be-3e634a75e897" ;
 
           //Memastikan ServiceUUID dan charactericstic UUID SAMA
           for (BluetoothService service in services) {
@@ -112,6 +112,13 @@ class ControlLightBloc extends Bloc<ControlLightEvent, ControlLightState> {
 
       if (event is UpdateDevices) {
         emit(BluetoothFound(event.devices, device: event.devices));
+      }
+
+      if (event is Reconect){
+        
+        StartConnect();
+        
+
       }
     });
   }

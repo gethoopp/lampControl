@@ -11,7 +11,7 @@ import 'package:mqtt_client/mqtt_server_client.dart';
 class MqttClient {
   final Function(bool status) updateState;
 
-  MqttClient({required this.updateState});
+  MqttClient( this.updateState);
 
 
  //Generate client ID
@@ -49,7 +49,7 @@ class MqttClient {
 
     if (client.connectionStatus!.state == MqttConnectionState.connected) {
       print('Connected');
-      updateState(isconnect = false);
+      updateState(isconnect = true);
     } else {
       print(
           'ERROR: MQTT connection failed - disconnecting, status is ${client.connectionStatus!.state}');

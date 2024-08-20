@@ -6,7 +6,7 @@ Padding buttonStart(Size size, VoidCallback changeButton,
   return Padding(
     padding: EdgeInsets.only(top: size.height * 0.02),
     child: SizedBox(
-        width: size.width * 0.8,
+        width: isChanged ?  size.width * 0.2 : size.width * 0.8 ,
         child: ElevatedButton(
             style: ButtonStyle(
                 backgroundColor: WidgetStatePropertyAll(

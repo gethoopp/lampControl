@@ -144,7 +144,7 @@ class FirstPage extends StatelessWidget {
                                   topRight: Radius.circular(50))),
                           height: size.height * 0.42,
                           child: Center(
-                            child: Text(state.error),
+                            child: Text(state.error, style: GoogleFonts.inter(color: Colors.black,fontSize: 20),),
                           ),
                         ),
                       );

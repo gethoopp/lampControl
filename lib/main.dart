@@ -4,7 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_blue_plus/flutter_blue_plus.dart';
 import 'package:get/get.dart';
 import 'package:lamp_control/cubit/dynamic_theme_cubit.dart';
-import 'package:lamp_control/view/home/homepage.dart';
+import 'package:lamp_control/view/details/bedroom.dart';
+
 
 
 import 'controller/routes.dart';
@@ -58,7 +59,7 @@ class _MyAppState extends State<MyApp> {
             theme: theme,
             home: const AnnotatedRegion<SystemUiOverlayStyle>(
                 value: SystemUiOverlayStyle(statusBarColor: Colors.transparent,statusBarIconBrightness: Brightness.dark),
-                child: Homepage()),
+                child: WelcomePage()),
           );
         },
       ),

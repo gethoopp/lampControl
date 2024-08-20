@@ -26,4 +26,7 @@ class ConnectDevices extends ControlLightEvent{
   ConnectDevices(this.bluetoothCharacteristic,this.bluetoothDevice,this.message);
 
 }
+
+//Fungsi reconnect 
+class Reconect extends ControlLightEvent{}
  
